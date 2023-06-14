@@ -4,8 +4,8 @@ try:
 
     list_of_age = []
     for i in range(1, num_of_tickets + 1):
-        Age = int(input(f'Укажите возраст посетителя № {i}: '))
-        list_of_age.append(Age)
+        age_ = int(input(f'Укажите возраст посетителя № {i}: '))
+        list_of_age.append(age_)
 except ValueError as error:
     exit('Введите число!')
 
