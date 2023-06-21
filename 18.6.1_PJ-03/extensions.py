@@ -18,6 +18,9 @@ class CryptoConverter():
         except KeyError:
             raise APIException(f'Не удалось обработать валюту {base}')
 
+        if quote == base:
+            raise APIException(f'Нельзя перевести одинаковые валюты "{base}".')
+
         try:
             amount = float(amount)
         except ValueError:
